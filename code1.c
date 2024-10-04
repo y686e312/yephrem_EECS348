@@ -1,5 +1,5 @@
 //function for the score combinations
-void Scorigami(int score) 
+void Scorigami() 
 {
     //defining variables 
     int score;
