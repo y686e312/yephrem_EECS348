@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+</head>
+<body>
+
+    <h2>JS Password Verification</h2>
+    <a href = "index.html">Home Page</a><br>
+    <br><label for="password1">Enter password:</label>
+    <input type="password" id="password1"><br><br>
+    <label for="password2">Re-enter password:</label>
+    <input type="password" id="password2"><br><br>
+    <button onclick="check_pass()">Verify Passwords</button>
+
+    <script>
+        function check_pass() {
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+
+            if (password1.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return;
+            }
+
+            if (password1 !== password2) {
+                alert("Passwords do not match. Please try again.");
+                return;
+            }
+            alert("Passwords match!");
+        }
+    </script>
+
+</body>
+</html>
